@@ -3,9 +3,25 @@
 /* ----------------------------- */
 
 :root {
+  /* colors */
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
 }
 
 /* ----------------------------- */
@@ -33,8 +49,23 @@ picture {
   margin: 0;
 }
 
+/* Reset font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: var(--fs-400);
+}
+
 /* set up the body */
 body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
   line-height: 1.5;
   min-height: 100vh;
 }
@@ -62,7 +93,7 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto Im !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -124,4 +155,12 @@ select {
 
 .text-white {
   color: hsl(var(--clr-white));
+}
+
+.alpha-white {
+  background-color: hsl(var(--clr-light) / 20%);
+}
+
+.flex-grow{
+  flex-grow: 2;
 }
